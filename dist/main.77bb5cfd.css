@@ -1,0 +1,153 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: left;
+}
+.footer__line {
+  border-top: 2px solid #e2e2e2;
+  width: 90%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header__title {
+  align-self: flex-start;
+  margin-bottom: 1.1rem;
+}
+.header__line {
+  border-top: 2px solid #e2e2e2;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.basic-contain {
+  background-color: #ffffff;
+}
+.basic-contain__header__top {
+  padding: 2rem 0 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.basic-contain__top__line {
+  border-top: 2px solid #ebf0f0;
+  width: 100%;
+}
+.basic-contain__form {
+  padding: 2rem;
+}
+.basic-contain__form__title {
+  margin-bottom: 2rem;
+}
+.basic-contain__form__line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 43vh;
+  margin-bottom: 3.5rem;
+}
+.basic-contain__form__monitor__line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 62vh;
+}
+
+.advan-contain {
+  background-color: #ffffff;
+}
+.advan-contain__header__top {
+  padding: 2rem 0 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.advan-contain__top__line {
+  border-top: 2px solid #ebf0f0;
+  width: 100%;
+}
+.advan-contain__form {
+  padding: 2rem;
+}
+.advan-contain__form__title {
+  margin-bottom: 2rem;
+}
+.advan-contain__form__line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vh;
+  margin-bottom: 3.5rem;
+}
+
+body {
+  background-color: #ebf0f0;
+  padding: 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+form, input, select {
+  font-size: 1.25rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #5AB5DF;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #5AB5DF;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

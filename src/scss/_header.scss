@@ -1,0 +1,19 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+.header {
+	
+	@include m.flexCenter();
+	flex-direction: column;
+
+	&__title {
+		align-self: flex-start;
+		margin-bottom: 1.1rem;
+	}
+
+	&__line {
+		border-top: 2px solid v.$darkGray;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+}

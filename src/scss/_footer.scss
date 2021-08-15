@@ -1,0 +1,14 @@
+@use './variables' as v;
+@use './mixins' as m;
+	
+	.footer {
+		@include m.flexCenter();
+		flex-direction: column;
+		justify-content: left;
+
+
+		&__line {
+			border-top: 2px solid v.$darkGray;
+			width: 90%;
+		}
+}

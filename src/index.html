@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="scss/main.scss">
+        <title>Helth Alerts</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__title">Helth Alerts</h1>
+            <hr class="header__line">
+        </header>
+
+        <main>
+
+            <section class="basic-contain">
+                <div class="basic-contain__header">
+                    <div class="basic-contain__header__top">
+                        <div class="basic-contain__header__top__arrow">arrow</div>
+                        <h2 class="basic-contain__header__top__title">Basic</h2>
+                    </div>
+                   
+                    <hr class="basic-contain__top__line">
+                </div>
+
+                <form class="basic-contain__form" id="form-basic">
+                    <h3 class="basic-contain__form__title">Daily health report</h3>
+
+                    <div class="basic-contain__form__line">
+                        <input type="checkbox" class="basic-contain__form__line__input__check">Send daily health report at: </input>
+                        <input 
+                            type="time" 
+                            id="appt" 
+                            name="appt" 
+                            min="06:00" 
+                            max="01:00" 
+                            required
+                            class="basic-contain__input__time">
+
+                    </div>
+
+                    <h3 class="basic-contain__form__title">Monitor service</h3>
+                    <div class="basic-contain__form__monitor__line">
+
+                        <p class="basic-contain__form__text">Wait</p>
+                        <input 
+                            type="number" 
+                            id="quantity"
+                            name="quantity"
+                            min="0"
+                            max="200"
+                            class="basic-contain__input__num"></input>
+                        <p class="basic-contain__form__text">minutes before sending repetitive email alerts</p>
+                    </div>
+                </form>
+            </section>
+
+            <section class="advan-contain">
+                <div class="advan-contain__header">
+                    <div class="advan-contain__header__top">
+                        <div class="advan-contain__header__top__arrow">arrow</div>
+                        <h2 class="advan-contain__header__top__title">Advanced</h2>
+                    </div>
+
+                    <hr class="advan-contain__top__line">
+                </div>
+
+                <form class="advan-contain__form" id="form-advanced">
+                    <h3 class="advan-contain__form__title">Server data disk space</h3>
+                    <div class="advan-contain__form__line">
+                    <input type="checkbox" class="advan-contain__input__check">Send weekly disk space alert at: </input>
+                    
+                    <select name="week" class="advan-contain__select__week">
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+
+                    <input 
+                        type="time" 
+                        id="time" 
+                        name="time" 
+                        min="06:00" 
+                        max="01:00" 
+                        required
+                        class="advan-contain__input__time">
+    
+                        <p class="advan-contain__form__text">when disk space has dropped below:</p>
+                    </div>
+                    <input type="checkbox" value="GB" name="space" class="advan-contain__input__check">
+                        <input 
+                        type="number" 
+                        id="sum"
+                        name="sum"
+                        min="0"
+                        max="200"
+                        class="basic-contain__input__sum"></input>
+                        GB
+                    </input>
+                    <input type="checkbox" value="GB" name="space" class="advan-contain__input__check">
+                        <input 
+                        type="number" 
+                        id="sum"
+                        name="sum"
+                        min="0"
+                        max="200"
+                        class="basic-contain__input__sum"></input>
+                        %
+                    </input>
+
+                </form>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <hr class="footer__line">
+            <div>
+                <button type="submit" form="form-basic form-advanced" value="Submit" disabled class="footer__button">SAVE</button>
+                <button type="button" disabled class="footer__button">Discard</button>
+            </div>
+        </footer>
+        
+    </body>
+</html>

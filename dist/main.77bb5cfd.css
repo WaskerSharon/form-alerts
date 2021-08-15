@@ -1,21 +1,48 @@
+@charset "UTF-8";
 .footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: left;
+  align-items: flex-start;
+  height: 3rem;
 }
 .footer__line {
   border-top: 2px solid #e2e2e2;
-  width: 90%;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.footer__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 13rem;
+  margin-left: 2rem;
+}
+.footer__btns__save {
+  background-color: #c7c7c7;
+  color: #ebf0f0;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 3rem;
+}
+.footer__btns__save:hover {
+  background-color: #5AB5DF;
+}
+.footer__btns__discard {
+  color: #c7c7c7;
+}
+.footer__btns__save, .footer__btns__discard {
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  align-items: flex-start;
 }
 .header__title {
-  align-self: flex-start;
   margin-bottom: 1.1rem;
 }
 .header__line {
@@ -81,14 +108,21 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 43vh;
+  width: 30rem;
+  max-width: 90vw;
+  height: 4rem;
   margin-bottom: 3.5rem;
+}
+.basic-contain__form__line__input-time {
+  width: 7rem;
 }
 .basic-contain__form__monitor__line {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 62vh;
+  width: 34rem;
+  max-width: 90vw;
+  height: 4rem;
 }
 
 .advan-contain {
@@ -104,7 +138,7 @@ table {
   width: 100%;
 }
 .advan-contain__form {
-  padding: 2rem;
+  padding: 2rem 2rem 6rem 2rem;
 }
 .advan-contain__form__title {
   margin-bottom: 2rem;
@@ -113,14 +147,110 @@ table {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vh;
-  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  width: 60rem;
+  max-width: 90vw;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+}
+.advan-contain__form__line__select__day {
+  width: 9rem;
+}
+.advan-contain__form__line__input-time {
+  width: 7rem;
+}
+.advan-contain__form__amount {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+  justify-content: space-between;
+  height: 4rem;
+}
+.advan-contain__form__amount__check-contain {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.advan-contain__form__amount__check {
+  width: 3rem;
+  margin-top: 0;
+}
+
+.down-arrow {
+  border: solid #5AB5DF;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 0 1rem 0.7rem 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-style__label {
+  display: inline;
+}
+.checkbox-style__regular {
+  display: none;
+}
+.checkbox-style__regular + .checkbox-style__label {
+  border: 2px solid #c7c7c7;
+  padding: 1px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+.checkbox-style__regular:checked + .checkbox-style__label {
+  border: 2px solid #5AB5DF;
+}
+.checkbox-style__regular:checked + .checkbox-style__label:after {
+  content: "✔";
+  font-size: 5px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #5AB5DF;
+}
+.checkbox-style__new-style + .checkbox-style__label {
+  padding: 0.5rem;
+}
+.checkbox-style__new-style:checked + .checkbox-style__label:after {
+  font-size: 1rem;
+  font-weight: 600;
+  left: 0.1rem;
 }
 
 body {
   background-color: #ebf0f0;
   padding: 4rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.main {
+  height: calc( 100vh - 195px );
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  height: 90%;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e2e2;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5AB5DF;
 }
 
 form, input, select {
@@ -148,6 +278,25 @@ p {
 
 section {
   margin-bottom: 2rem;
+}
+
+input, select {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-bottom: 2px solid #ebf0f0;
+  text-align: center;
+  width: 5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+input:focus, select:focus {
+  border-bottom: 2px solid #a7a7a7;
+}
+
+input[type=time]::-webkit-calendar-picker-indicator {
+  filter: invert(50%) sepia(20%) saturate(4000%) hue-rotate(190deg) brightness(95%) contrast(80%);
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

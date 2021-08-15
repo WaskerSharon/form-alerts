@@ -2,13 +2,46 @@
 @use './mixins' as m;
 	
 	.footer {
+
 		@include m.flexCenter();
 		flex-direction: column;
-		justify-content: left;
+		align-items: flex-start;
+		height: 3rem;
 
 
 		&__line {
 			border-top: 2px solid v.$darkGray;
-			width: 90%;
+			width: 100%;
+			margin-bottom: 2rem;
 		}
+
+		&__btns {
+			@include m.flexCenter();
+			justify-content: space-between;
+			width: 13rem;
+			margin-left: 2rem;
+
+			&__save {
+				background-color: v.$darkestGray;
+				color: v.$lightGray;
+				width: 6rem;
+				height: 3rem;
+				border-radius: 3rem;
+				
+				&:hover {
+					background-color: v.$primaryColor;
+				}
+			}
+
+			&__discard {
+				color: v.$darkestGray;
+			}
+
+			&__save, &__discard {
+				cursor: pointer;
+				font-size: 1.2rem;
+
+			}
+		}
+
 }

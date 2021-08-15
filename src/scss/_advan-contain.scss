@@ -15,7 +15,7 @@
     }
 
     &__form {
-        padding: 2rem ;
+        padding: 2rem 2rem 6rem 2rem ;
 
         &__title {
             margin-bottom: 2rem;
@@ -24,9 +24,41 @@
         &__line {
             @include m.flexCenter();
             justify-content: space-between;
-            width: 100vh;
-            margin-bottom: 3.5rem;
+            flex-wrap: wrap;
+            width: 60rem;
+            max-width: 90vw;
+            height: 4rem;
+            margin-bottom: 1.5rem;
+
+            &__select__day {
+                width: 9rem;
+            }
+
+            &__input-time {
+                width: 7rem;
+            } 
         }
+
+
+        &__amount {
+            @include m.flexCenter();
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 2rem;
+            justify-content: space-between;
+            height: 4rem;
+
+            &__check-contain {
+                @include m.flexCenter();
+                margin-bottom: .8rem;
+            }
+
+            &__check {
+                width: 3rem;
+                margin-top: 0;
+            }
+        }
+
 
     }
 

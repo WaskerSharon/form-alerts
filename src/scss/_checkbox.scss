@@ -1,0 +1,50 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+    
+    .checkbox-style{
+
+        &__label {
+            display: inline;
+        }
+        
+        &__regular {
+            display: none;
+        } 
+
+        &__regular + &__label {
+            border: 2px solid v.$darkestGray;
+            padding: 1px;
+            border-radius: 3px;
+            display: inline-block;
+            position: relative;
+        }
+
+        &__regular:checked + &__label {
+            border: 2px solid v.$primaryColor;
+        }
+
+        &__regular:checked + &__label:after {
+            content: '\2714';
+            font-size: 5px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            color: v.$primaryColor;
+        }
+
+        &__new-style + &__label {
+            padding: .5rem;
+        }
+
+        &__new-style:checked + &__label:after {
+            font-size: 1rem;
+            font-weight: 600;
+            left: .1rem
+        }
+
+    }
+     
+     
+    
+    

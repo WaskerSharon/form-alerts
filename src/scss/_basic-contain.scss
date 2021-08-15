@@ -7,6 +7,7 @@
     &__header__top {
         padding: 2rem 0 1rem 2rem; 
         @include m.flexCenter();
+
     }
     
     &__top__line {
@@ -24,14 +25,23 @@
         &__line {
             @include m.flexCenter();
             justify-content: space-between;
-            width: 43vh;
+            width: 30rem;
+            max-width: 90vw;
+            height: 4rem;
             margin-bottom: 3.5rem;
+
+            &__input-time {
+                width: 7rem;
+            }
         }
+
 
         &__monitor__line {
             @include m.flexCenter();
             justify-content: space-between;
-            width: 62vh;
+            width: 34rem;
+            max-width: 90vw;
+            height: 4rem;
         }
 
     }

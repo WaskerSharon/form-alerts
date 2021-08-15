@@ -13,12 +13,12 @@
             <hr class="header__line">
         </header>
 
-        <main>
+        <main class="main">
 
             <section class="basic-contain">
                 <div class="basic-contain__header">
                     <div class="basic-contain__header__top">
-                        <div class="basic-contain__header__top__arrow">arrow</div>
+                        <i class="basic-contain__header__top__arrow down-arrow "></i>
                         <h2 class="basic-contain__header__top__title">Basic</h2>
                     </div>
                    
@@ -28,9 +28,15 @@
                 <form class="basic-contain__form" id="form-basic">
                     <h3 class="basic-contain__form__title">Daily health report</h3>
 
-                    <div class="basic-contain__form__line">
-                        <input type="checkbox" class="basic-contain__form__line__input__check">Send daily health report at: 
-                        <input type="time" id="appt" name="appt" min="06:00" max="01:00" required="" class="basic-contain__input__time">
+                    <div class="basic-contain__form__line checkbox-style">
+
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-1-1" class="basic-contain__form__line__input-check checkbox-style__regular checkbox-style__new-style">
+                            <label class="checkbox-style__label" for="checkbox-1-1"></label>
+                            <label>Send daily health report at:</label> 
+                        </div>
+
+                        <input type="time" id="appt" name="appt" min="06:00" max="01:00" value="08:00" required="" class="basic-contain__form__line__input-time">
 
                     </div>
 
@@ -38,7 +44,7 @@
                     <div class="basic-contain__form__monitor__line">
 
                         <p class="basic-contain__form__text">Wait</p>
-                        <input type="number" id="quantity" name="quantity" min="0" max="200" class="basic-contain__input__num">
+                        <input type="number" id="quantity" name="quantity" min="0" max="200" value="60" class="basic-contain__input__num">
                         <p class="basic-contain__form__text">minutes before sending repetitive email alerts</p>
                     </div>
                 </form>
@@ -47,7 +53,7 @@
             <section class="advan-contain">
                 <div class="advan-contain__header">
                     <div class="advan-contain__header__top">
-                        <div class="advan-contain__header__top__arrow">arrow</div>
+                        <i class="advan-contain__header__top__arrow down-arrow"></i>
                         <h2 class="advan-contain__header__top__title">Advanced</h2>
                     </div>
 
@@ -57,40 +63,59 @@
                 <form class="advan-contain__form" id="form-advanced">
                     <h3 class="advan-contain__form__title">Server data disk space</h3>
                     <div class="advan-contain__form__line">
-                    <input type="checkbox" class="advan-contain__input__check">Send weekly disk space alert at: 
-                    
-                    <select name="week" class="advan-contain__select__week">
-                        <option value="Sunday">Sunday</option>
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                        <option value="Saturday">Saturday</option>
-                    </select>
+                        <div class="checkbox-style">
+                            <input type="checkbox" id="checkbox-1-2" class="advan-contain__form__line__input-check checkbox-style__regular checkbox-style__new-style">
+                            <label class="checkbox-style__label" for="checkbox-1-2"></label>
+                            <label>Send weekly disk space alert at:</label> 
+                        </div>
+                        
+                        <select name="day" class="advan-contain__form__line__select__day">
+                            <option value="Sunday">Sunday</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                        </select>
 
-                    <input type="time" id="time" name="time" min="06:00" max="01:00" required="" class="advan-contain__input__time">
+                        <input type="time" id="time" name="time" min="06:00" max="01:00" value="08:00" required="" class="advan-contain__form__line__input-time">
     
                         <p class="advan-contain__form__text">when disk space has dropped below:</p>
                     </div>
-                    <input type="checkbox" value="GB" name="space" class="advan-contain__input__check">
-                        <input type="number" id="sum" name="sum" min="0" max="200" class="basic-contain__input__sum">
-                        GB
-                    
-                    <input type="checkbox" value="GB" name="space" class="advan-contain__input__check">
-                        <input type="number" id="sum" name="sum" min="0" max="200" class="basic-contain__input__sum">
-                        %
-                    
+                    <div class="advan-contain__form__amount">
 
+                        <div class="advan-contain__form__amount__check-contain">
+                            <div class="checkbox-style">
+                                <input type="checkbox" id="checkbox-1-3" value="GB" name="gb-unit" class="advan-contain__form__amount__check checkbox-style__regular checkbox-style__new-style">
+                                <label class="checkbox-style__label" for="checkbox-1-3"></label>
+                            </div>
+
+                            <input type="number" id="amount" name="amount" min="0" max="200" for="gb-unit" value="1" class="advan-contain__form__amount__check__sum">
+                            <label for="gb-unit">GB</label> 
+                        </div>
+    
+                        <div class="advan-contain__form__amount__check-contain">
+
+                            <div class="checkbox-style">
+                                <input type="checkbox" id="checkbox-1-4" value="%" name="percent-unit" class="advan-contain__form__amount__check checkbox-style__regular checkbox-style__new-style">
+                                <label class="checkbox-style__label" for="checkbox-1-4"></label>
+                            </div>
+
+                            <input type="number" id="amount" name="amount" min="0" max="200" for="percent-unit" value="5" class="advan-contain__form__amount__check__sum">
+                            <label for="percent-unit">%</label>
+                        </div>
+                
+                    </div>
                 </form>
             </section>
         </main>
 
         <footer class="footer">
             <hr class="footer__line">
-            <div>
-                <button type="submit" form="form-basic form-advanced" value="Submit" disabled="" class="footer__button">SAVE</button>
-                <button type="button" disabled="" class="footer__button">Discard</button>
+            <div class="footer__btns">
+                <button type="submit reset" form="form-basic form-advanced" value="Submit" class="footer__btns__save">SAVE</button>
+                <button type="button" class="footer__btns__discard">Discard</button>
             </div>
         </footer>
         

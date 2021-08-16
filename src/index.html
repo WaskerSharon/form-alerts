@@ -15,15 +15,20 @@
 
         <main class="main">
 
+            <!-- <button class="accordion">Section 1</button> -->
+            
             <section class="basic-contain">
-                <div class="basic-contain__header">
+    
+                <button class="basic-contain__header accordion">
                     <div class="basic-contain__header__top">
                         <i class="basic-contain__header__top__arrow down-arrow "></i>
                         <h2 class="basic-contain__header__top__title">Basic</h2>
                     </div>
-                   
+                    
                     <hr class="basic-contain__top__line">
-                </div>
+                </button>
+
+                <div class="panel">
 
                 <form class="basic-contain__form" id="form-basic">
                     <h3 class="basic-contain__form__title">Daily health report</h3>
@@ -63,17 +68,21 @@
                         <p class="basic-contain__form__text">minutes before sending repetitive email alerts</p>
                     </div>
                 </form>
+            </div>
             </section>
 
+
             <section class="advan-contain">
-                <div class="advan-contain__header">
+                <button class="advan-contain__header accordion">
                     <div class="advan-contain__header__top">
                         <i class="advan-contain__header__top__arrow down-arrow"></i>
                         <h2 class="advan-contain__header__top__title">Advanced</h2>
                     </div>
-
+    
                     <hr class="advan-contain__top__line">
-                </div>
+                </button>
+
+                <div class="panel">
 
                 <form class="advan-contain__form" id="form-advanced">
                     <h3 class="advan-contain__form__title">Server data disk space</h3>
@@ -147,6 +156,7 @@
                 
                     </div>
                 </form>
+            </div>
             </section>
         </main>
 
@@ -157,6 +167,8 @@
                 <button type="button"  class="footer__btns__discard">Discard</button>
             </div>
         </footer>
+
+        <script type="text/javascript" src="./scripts/accordion.js"></script>
         
     </body>
 </html>

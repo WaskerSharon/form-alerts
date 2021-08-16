@@ -220,6 +220,24 @@ table {
   left: 0.1rem;
 }
 
+.accordion {
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
 body {
   background-color: #ebf0f0;
   padding: 4rem;
